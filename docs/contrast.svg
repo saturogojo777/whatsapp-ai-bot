@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1080" viewBox="0 0 1240 1080">
+    
+  <defs>
+    <linearGradient id="brand" x1="14.644660940672622%" y1="14.64466094067263%" x2="85.35533905932738%" y2="85.35533905932738%"><stop offset="0" stop-color="#b9a7ff"/><stop offset="0.55" stop-color="#7c5cff"/><stop offset="1" stop-color="#3dd6c4"/></linearGradient>
+    <linearGradient id="headline" x1="1.0926199633097156%" y1="39.60441545911203%" x2="98.90738003669028%" y2="60.39558454088797%"><stop offset="0" stop-color="#b9a7ff"/><stop offset="0.42" stop-color="#e3d9ff"/><stop offset="1" stop-color="#3dd6c4"/></linearGradient>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8b7cff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#8b7cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#3dd6c4" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#3dd6c4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8b7cff" stop-opacity="0.55"/>
+      <stop offset="0.55" stop-color="#6b4cff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#6b4cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbBody" cx="33%" cy="26%" r="78%">
+      <stop offset="0" stop-color="#f1eaff"/>
+      <stop offset="0.28" stop-color="#b7a2ff"/>
+      <stop offset="0.58" stop-color="#7251ee"/>
+      <stop offset="0.85" stop-color="#33207f"/>
+      <stop offset="1" stop-color="#170d3d"/>
+    </radialGradient>
+    <radialGradient id="orbRim" cx="68%" cy="74%" r="60%">
+      <stop offset="0" stop-color="#3dd6c4" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#3dd6c4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ringStroke" x1="32.89899283371656%" y1="3.015368960704585%" x2="67.10100716628344%" y2="96.98463103929541%"><stop offset="0" stop-color="#b9a7ff"/><stop offset="0.5" stop-color="#6b4cff"/><stop offset="1" stop-color="#3dd6c4"/></linearGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="vignette" cx="50%" cy="42%" r="72%">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
+    </radialGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+    
+    <rect x="0" y="0" width="1240" height="1080" rx="0" fill="#06070b" opacity="1"/>
+    <ellipse cx="198.4" cy="21.6" rx="570.4" ry="777.6" fill="url(#bgGlow)"/>
+    <ellipse cx="1140.8" cy="64.8" rx="446.4" ry="626.4" fill="url(#bgGlow2)" opacity="0.6"/>
+    <rect width="1240" height="1080" fill="url(#grid)" opacity="0.55"/>
+    <rect width="1240" height="1080" fill="url(#vignette)"/>
+    <g transform="translate(80, 48)"><g>
+    <circle cx="18" cy="18" r="18" fill="none" stroke="url(#brand)" stroke-width="1.8"/>
+    <circle cx="18" cy="18" r="10.080000000000002" fill="none" stroke="url(#brand)" stroke-width="1.3679999999999999" opacity="0.72"/>
+    <path d="M18 0V36M0 18H36" stroke="url(#brand)" stroke-width="1.08" opacity="0.38"/>
+    <circle cx="18" cy="18" r="3.6" fill="url(#brand)"/>
+  </g><text x="48" y="28" font-family="Space Grotesk" font-size="21" font-weight="600" fill="#f1f4fa" text-anchor="start" opacity="1" letter-spacing="0">HueForge</text></g>
+    <text x="1160" y="68" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#7f889c" text-anchor="end" opacity="1" letter-spacing="2.2">WCAG 2.1 · BODY TEXT</text>
+    <text x="80" y="154" font-family="Space Grotesk" font-size="50" font-weight="600" fill="#f1f4fa" text-anchor="start" opacity="1" letter-spacing="-2">Every pair, graded.</text>
+    <text x="80" y="190" font-family="Inter" font-size="18" font-weight="400" fill="#b7bfd0" text-anchor="start" opacity="1" letter-spacing="0">The 5 × 5 matrix renders your real colours, so an unreadable pair is impossible to miss.</text>
+    <text x="80" y="224" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#9de9dd" text-anchor="start" opacity="1" letter-spacing="1">6/20 pairs pass AA · 2/20 pass AAA</text>
+    <rect x="350" y="242" width="140" height="44" rx="10" fill="#e3e2f7" stroke="rgba(255,255,255,0.12)" stroke-width="1" opacity="1"/>
+         <text x="364" y="270" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.85" letter-spacing="1">100</text><rect x="498" y="242" width="140" height="44" rx="10" fill="#acb5dc" stroke="rgba(255,255,255,0.12)" stroke-width="1" opacity="1"/>
+         <text x="512" y="270" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.85" letter-spacing="1">300</text><rect x="646" y="242" width="140" height="44" rx="10" fill="#8963fd" stroke="rgba(255,255,255,0.12)" stroke-width="1" opacity="1"/>
+         <text x="660" y="270" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.85" letter-spacing="1">500</text><rect x="794" y="242" width="140" height="44" rx="10" fill="#6e32a6" stroke="rgba(255,255,255,0.12)" stroke-width="1" opacity="1"/>
+         <text x="808" y="270" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.85" letter-spacing="1">700</text><rect x="942" y="242" width="140" height="44" rx="10" fill="#2f2458" stroke="rgba(255,255,255,0.12)" stroke-width="1" opacity="1"/>
+         <text x="956" y="270" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.85" letter-spacing="1">900</text>
+    <rect x="80" y="300" width="200" height="140" rx="10" fill="#e3e2f7" stroke="rgba(255,255,255,0.12)" stroke-width="1" opacity="1"/>
+        <text x="98" y="334" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.85" letter-spacing="1">100</text><rect x="350" y="300" width="140" height="140" rx="10" fill="#e3e2f7" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="420" y="372" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#e3e2f7" text-anchor="middle" opacity="1" letter-spacing="0">·</text>
+            <text x="420" y="400" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#e3e2f7" text-anchor="middle" opacity="0.72" letter-spacing="1.4">—</text><rect x="498" y="300" width="140" height="140" rx="10" fill="#e3e2f7" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="568" y="372" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#acb5dc" text-anchor="middle" opacity="1" letter-spacing="0">1.6</text>
+            <text x="568" y="400" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#acb5dc" text-anchor="middle" opacity="0.72" letter-spacing="1.4">FAIL</text><rect x="646" y="300" width="140" height="140" rx="10" fill="#e3e2f7" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="716" y="372" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#8963fd" text-anchor="middle" opacity="1" letter-spacing="0">3.1</text>
+            <text x="716" y="400" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#8963fd" text-anchor="middle" opacity="0.72" letter-spacing="1.4">FAIL</text><rect x="794" y="300" width="140" height="140" rx="10" fill="#e3e2f7" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="864" y="372" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#6e32a6" text-anchor="middle" opacity="1" letter-spacing="0">6.2</text>
+            <text x="864" y="400" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#6e32a6" text-anchor="middle" opacity="0.72" letter-spacing="1.4">AA</text><rect x="942" y="300" width="140" height="140" rx="10" fill="#e3e2f7" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="1012" y="372" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#2f2458" text-anchor="middle" opacity="1" letter-spacing="0">10.9</text>
+            <text x="1012" y="400" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#2f2458" text-anchor="middle" opacity="0.72" letter-spacing="1.4">AAA</text><rect x="80" y="448" width="200" height="140" rx="10" fill="#acb5dc" stroke="rgba(255,255,255,0.12)" stroke-width="1" opacity="1"/>
+        <text x="98" y="482" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.85" letter-spacing="1">300</text><rect x="350" y="448" width="140" height="140" rx="10" fill="#acb5dc" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="420" y="520" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#e3e2f7" text-anchor="middle" opacity="1" letter-spacing="0">1.6</text>
+            <text x="420" y="548" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#e3e2f7" text-anchor="middle" opacity="0.72" letter-spacing="1.4">FAIL</text><rect x="498" y="448" width="140" height="140" rx="10" fill="#acb5dc" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="568" y="520" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#acb5dc" text-anchor="middle" opacity="1" letter-spacing="0">·</text>
+            <text x="568" y="548" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#acb5dc" text-anchor="middle" opacity="0.72" letter-spacing="1.4">—</text><rect x="646" y="448" width="140" height="140" rx="10" fill="#acb5dc" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="716" y="520" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#8963fd" text-anchor="middle" opacity="1" letter-spacing="0">2.0</text>
+            <text x="716" y="548" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#8963fd" text-anchor="middle" opacity="0.72" letter-spacing="1.4">FAIL</text><rect x="794" y="448" width="140" height="140" rx="10" fill="#acb5dc" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="864" y="520" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#6e32a6" text-anchor="middle" opacity="1" letter-spacing="0">3.9</text>
+            <text x="864" y="548" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#6e32a6" text-anchor="middle" opacity="0.72" letter-spacing="1.4">FAIL</text><rect x="942" y="448" width="140" height="140" rx="10" fill="#acb5dc" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="1012" y="520" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#2f2458" text-anchor="middle" opacity="1" letter-spacing="0">6.9</text>
+            <text x="1012" y="548" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#2f2458" text-anchor="middle" opacity="0.72" letter-spacing="1.4">AA</text><rect x="80" y="596" width="200" height="140" rx="10" fill="#8963fd" stroke="rgba(255,255,255,0.12)" stroke-width="1" opacity="1"/>
+        <text x="98" y="630" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.85" letter-spacing="1">500</text><rect x="350" y="596" width="140" height="140" rx="10" fill="#8963fd" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="420" y="668" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#e3e2f7" text-anchor="middle" opacity="1" letter-spacing="0">3.1</text>
+            <text x="420" y="696" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#e3e2f7" text-anchor="middle" opacity="0.72" letter-spacing="1.4">FAIL</text><rect x="498" y="596" width="140" height="140" rx="10" fill="#8963fd" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="568" y="668" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#acb5dc" text-anchor="middle" opacity="1" letter-spacing="0">2.0</text>
+            <text x="568" y="696" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#acb5dc" text-anchor="middle" opacity="0.72" letter-spacing="1.4">FAIL</text><rect x="646" y="596" width="140" height="140" rx="10" fill="#8963fd" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="716" y="668" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#8963fd" text-anchor="middle" opacity="1" letter-spacing="0">·</text>
+            <text x="716" y="696" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#8963fd" text-anchor="middle" opacity="0.72" letter-spacing="1.4">—</text><rect x="794" y="596" width="140" height="140" rx="10" fill="#8963fd" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="864" y="668" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#6e32a6" text-anchor="middle" opacity="1" letter-spacing="0">2.0</text>
+            <text x="864" y="696" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#6e32a6" text-anchor="middle" opacity="0.72" letter-spacing="1.4">FAIL</text><rect x="942" y="596" width="140" height="140" rx="10" fill="#8963fd" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="1012" y="668" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#2f2458" text-anchor="middle" opacity="1" letter-spacing="0">3.5</text>
+            <text x="1012" y="696" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#2f2458" text-anchor="middle" opacity="0.72" letter-spacing="1.4">FAIL</text><rect x="80" y="744" width="200" height="140" rx="10" fill="#6e32a6" stroke="rgba(255,255,255,0.12)" stroke-width="1" opacity="1"/>
+        <text x="98" y="778" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.85" letter-spacing="1">700</text><rect x="350" y="744" width="140" height="140" rx="10" fill="#6e32a6" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="420" y="816" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#e3e2f7" text-anchor="middle" opacity="1" letter-spacing="0">6.2</text>
+            <text x="420" y="844" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#e3e2f7" text-anchor="middle" opacity="0.72" letter-spacing="1.4">AA</text><rect x="498" y="744" width="140" height="140" rx="10" fill="#6e32a6" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="568" y="816" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#acb5dc" text-anchor="middle" opacity="1" letter-spacing="0">3.9</text>
+            <text x="568" y="844" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#acb5dc" text-anchor="middle" opacity="0.72" letter-spacing="1.4">FAIL</text><rect x="646" y="744" width="140" height="140" rx="10" fill="#6e32a6" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="716" y="816" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#8963fd" text-anchor="middle" opacity="1" letter-spacing="0">2.0</text>
+            <text x="716" y="844" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#8963fd" text-anchor="middle" opacity="0.72" letter-spacing="1.4">FAIL</text><rect x="794" y="744" width="140" height="140" rx="10" fill="#6e32a6" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="864" y="816" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#6e32a6" text-anchor="middle" opacity="1" letter-spacing="0">·</text>
+            <text x="864" y="844" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#6e32a6" text-anchor="middle" opacity="0.72" letter-spacing="1.4">—</text><rect x="942" y="744" width="140" height="140" rx="10" fill="#6e32a6" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="1012" y="816" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#2f2458" text-anchor="middle" opacity="1" letter-spacing="0">1.8</text>
+            <text x="1012" y="844" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#2f2458" text-anchor="middle" opacity="0.72" letter-spacing="1.4">FAIL</text><rect x="80" y="892" width="200" height="140" rx="10" fill="#2f2458" stroke="rgba(255,255,255,0.12)" stroke-width="1" opacity="1"/>
+        <text x="98" y="926" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.85" letter-spacing="1">900</text><rect x="350" y="892" width="140" height="140" rx="10" fill="#2f2458" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="420" y="964" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#e3e2f7" text-anchor="middle" opacity="1" letter-spacing="0">10.9</text>
+            <text x="420" y="992" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#e3e2f7" text-anchor="middle" opacity="0.72" letter-spacing="1.4">AAA</text><rect x="498" y="892" width="140" height="140" rx="10" fill="#2f2458" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="568" y="964" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#acb5dc" text-anchor="middle" opacity="1" letter-spacing="0">6.9</text>
+            <text x="568" y="992" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#acb5dc" text-anchor="middle" opacity="0.72" letter-spacing="1.4">AA</text><rect x="646" y="892" width="140" height="140" rx="10" fill="#2f2458" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="716" y="964" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#8963fd" text-anchor="middle" opacity="1" letter-spacing="0">3.5</text>
+            <text x="716" y="992" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#8963fd" text-anchor="middle" opacity="0.72" letter-spacing="1.4">FAIL</text><rect x="794" y="892" width="140" height="140" rx="10" fill="#2f2458" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="864" y="964" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#6e32a6" text-anchor="middle" opacity="1" letter-spacing="0">1.8</text>
+            <text x="864" y="992" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#6e32a6" text-anchor="middle" opacity="0.72" letter-spacing="1.4">FAIL</text><rect x="942" y="892" width="140" height="140" rx="10" fill="#2f2458" stroke="rgba(0,0,0,0.14)" stroke-width="1" opacity="1"/>
+            <text x="1012" y="964" font-family="JetBrains Mono" font-size="30" font-weight="600" fill="#2f2458" text-anchor="middle" opacity="1" letter-spacing="0">·</text>
+            <text x="1012" y="992" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#2f2458" text-anchor="middle" opacity="0.72" letter-spacing="1.4">—</text>
+    <text x="80" y="1032" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#5c6478" text-anchor="start" opacity="1" letter-spacing="1.8">HUEFORGE · hueforge.app</text>
+  </svg>

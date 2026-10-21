@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saturogojo777.github.io/whatsapp-ai-bot/sitemap.xml

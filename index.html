@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HueForge — Accessible OKLCH palette generator</title>
+    <meta
+      name="description"
+      content="HueForge is a free, open-source palette generator for designers and developers. Generate five-colour OKLCH ramps, check WCAG contrast on every pair, preview them in real UI, and export CSS, Tailwind, SCSS, JSON, SVG, ASE or PNG."
+    />
+    <meta name="author" content="HueForge contributors" />
+    <meta name="theme-color" content="#06070b" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="canonical" href="https://saturogojo777.github.io/whatsapp-ai-bot/" />
+
+    <!-- Social cards. Swap the URLs for your own domain when you deploy. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HueForge — Palettes that survive real interfaces" />
+    <meta
+      property="og:description"
+      content="Generate accessible OKLCH colour ramps in seconds. Contrast-tested, UI-previewed and ready to export."
+    />
+    <meta property="og:image" content="./assets/og.png" />
+    <meta property="og:url" content="https://saturogojo777.github.io/whatsapp-ai-bot/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HueForge — accessible OKLCH palette generator" />
+    <meta
+      name="twitter:description"
+      content="Five-colour OKLCH ramps, WCAG checks, live UI previews and one-click exports. Open source, zero dependencies."
+    />
+    <meta name="twitter:image" content="./assets/og.png" />
+
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/icon-192.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="preload" href="./assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/app.css" />
+
+    <!-- Apply the saved theme before first paint to avoid a flash. -->
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem('hueforge:theme:v1') || 'system';
+          const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+          document.documentElement.dataset.theme = stored === 'system' ? (prefersLight ? 'light' : 'dark') : stored;
+        } catch {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      })();
+    </script>
+
+  </head>
+
+  <body>
+    <a class="skip-link" href="#studio">Skip to the palette studio</a>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="site-header" id="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="#top" aria-label="HueForge home">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="13" stroke="url(#brandGradient)" stroke-width="1.6" />
+              <circle cx="16" cy="16" r="7.5" stroke="url(#brandGradient)" stroke-width="1.2" opacity="0.7" />
+              <path d="M16 3v26M3 16h26" stroke="url(#brandGradient)" stroke-width="1" opacity="0.45" />
+              <circle cx="16" cy="16" r="2.6" fill="url(#brandGradient)" />
+              <defs>
+                <linearGradient id="brandGradient" x1="3" y1="3" x2="29" y2="29" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#b9a7ff" />
+                  <stop offset="0.55" stop-color="#7c5cff" />
+                  <stop offset="1" stop-color="#3dd6c4" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="brand__word">Hue<span>Forge</span></span>
+        </a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="#studio">Studio</a>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="site-header__actions">
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme (T)">
+            <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.7" />
+              <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+            <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 14.4A8.4 8.4 0 0 1 9.6 4a8.4 8.4 0 1 0 10.4 10.4Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <a class="button button--github" href="https://github.com/saturogojo777/whatsapp-ai-bot" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 16 16" aria-hidden="true" width="16" height="16">
+              <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
+            </svg>
+            <span>Star on GitHub</span>
+          </a>
+          <button class="icon-button menu-button" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ================================================================ -->
+      <!-- Hero                                                             -->
+      <!-- ================================================================ -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__inner">
+          <div class="hero__copy">
+            <p class="eyebrow reveal"><span class="pulse-dot" aria-hidden="true"></span> Open source · MIT · No sign-up</p>
+            <h1 id="hero-title" class="reveal">
+              Palettes that<br />
+              survive <span class="text-gradient">real interfaces.</span>
+            </h1>
+            <p class="lede reveal">
+              HueForge turns one base colour into a five-step OKLCH ramp, tests every
+              text/background pair against WCAG, previews it inside a real UI, and hands
+              you production-ready tokens. All in your browser — nothing is uploaded.
+            </p>
+            <div class="hero__actions reveal">
+              <a class="button button--primary button--lg" href="#studio">
+                Start forging
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5.5 15.5 10 11 14.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              </a>
+              <button class="button button--ghost button--lg" id="hero-random" type="button">
+                Surprise me <kbd>R</kbd>
+              </button>
+            </div>
+            <dl class="hero__stats reveal">
+              <div><dt>Ramp</dt><dd>5 OKLCH steps</dd></div>
+              <div><dt>Contrast</dt><dd>25 pairs checked</dd></div>
+              <div><dt>Exports</dt><dd>8 formats</dd></div>
+              <div><dt>Network</dt><dd>0 requests</dd></div>
+            </dl>
+          </div>
+
+          <div class="hero__visual reveal">
+            <div class="hero__stage" id="hero-stage" role="img" aria-label="An animated three-dimensional orb lit by the colours of the current palette. Drag to rotate.">
+              <div class="hero__fallback" aria-hidden="true"></div>
+              <span class="hero__ring hero__ring--one" aria-hidden="true"></span>
+              <span class="hero__ring hero__ring--two" aria-hidden="true"></span>
+              <span class="hero__badge hero__badge--a" id="hero-badge-a" aria-hidden="true">#7C5CFF</span>
+              <span class="hero__badge hero__badge--b" id="hero-badge-b" aria-hidden="true">AAA</span>
+            </div>
+            <p class="hero__caption"><span class="drag-dot" aria-hidden="true"></span> Drag to rotate · colours follow your palette</p>
+          </div>
+        </div>
+        <div class="hero__marquee" aria-hidden="true">
+          <div class="marquee__track">
+            <span>OKLCH</span><span>·</span><span>WCAG 2.1</span><span>·</span><span>APCA-aware</span><span>·</span><span>COLOR-VISION SAFE</span><span>·</span><span>ZERO DEPENDENCIES</span><span>·</span><span>EXPORT ANYWHERE</span><span>·</span>
+            <span>OKLCH</span><span>·</span><span>WCAG 2.1</span><span>·</span><span>APCA-aware</span><span>·</span><span>COLOR-VISION SAFE</span><span>·</span><span>ZERO DEPENDENCIES</span><span>·</span><span>EXPORT ANYWHERE</span><span>·</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================ -->
+      <!-- Studio                                                           -->
+      <!-- ================================================================ -->
+      <section class="studio section" id="studio" aria-labelledby="studio-title">
+        <header class="section-head">
+          <p class="eyebrow reveal">01 — The studio</p>
+          <h2 id="studio-title" class="reveal">Forge, lock, <span class="text-gradient">export.</span></h2>
+          <p class="section-head__lede reveal">
+            Pick a base, choose a harmony, and lock the swatches you love. Every
+            generation is deterministic, so a link always rebuilds the same palette.
+          </p>
+        </header>
+
+        <div class="studio__layout">
+          <aside class="studio__sidebar reveal" aria-label="Palette controls">
+            <section class="panel">
+              <div class="panel__head">
+                <h3>Base colour</h3>
+                <span class="chip" id="base-name">Iris</span>
+              </div>
+
+              <div class="base-row">
+                <label class="color-well" title="Pick a base colour">
+                  <input type="color" id="base-color" value="#7c5cff" aria-label="Base colour picker" />
+                  <span class="color-well__swatch" id="base-well" aria-hidden="true"></span>
+                  <span class="color-well__hint" aria-hidden="true">Pick</span>
+                </label>
+
+                <div class="base-fields">
+                  <div class="hex-field">
+                    <span aria-hidden="true">#</span>
+                    <input id="base-hex" type="text" value="7c5cff" maxlength="6" spellcheck="false" autocomplete="off" aria-label="Base colour hex value" />
+                    <button class="text-button" id="copy-base" type="button" aria-label="Copy base colour">Copy</button>
+                  </div>
+                  <div class="random-row">
+                    <button class="button button--subtle" id="random-base" type="button">Random colour</button>
+                    <button class="icon-button" id="eyedropper" type="button" title="Pick a colour from your screen (Chrome/Edge)" aria-label="Pick a colour from your screen">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15.5 4.5 4 4M13 7l4 4M4 20l1.2-4.6L16.4 4.2a2 2 0 0 1 2.8 0l.6.6a2 2 0 0 1 0 2.8L8.6 18.8 4 20Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="import">
+                <label class="field-label" for="palette-input">Import a palette</label>
+                <div class="import__row">
+                  <input id="palette-input" type="text" placeholder="#7c5cff, #ff8a5c, #ffd166" autocomplete="off" spellcheck="false" />
+                  <button id="import-palette" class="button button--subtle" type="button">Use</button>
+                </div>
+                <p class="field-hint" id="import-hint" role="status" aria-live="polite">Paste 2–5 hex codes or upload an image to pull its colours.</p>
+              </div>
+
+              <div class="import__image">
+                <label class="upload" for="image-input">
+                  <input type="file" id="image-input" accept="image/*" class="visually-hidden" />
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  <span>Extract from an image</span>
+                </label>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel__head">
+                <h3>Harmony</h3>
+                <span class="panel__hint" id="harmony-hint">Auto adapts to your base</span>
+              </div>
+              <div class="harmony-grid" id="harmony-grid" role="radiogroup" aria-label="Colour harmony"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel__head">
+                <h3>Generation</h3>
+                <span class="panel__hint" id="seed-label">Seed 1</span>
+              </div>
+              <div class="studio__actions">
+                <button class="button button--primary" id="generate" type="button">
+                  Generate <kbd>Space</kbd>
+                </button>
+                <button class="icon-button" id="undo" type="button" title="Undo (Ctrl+Z)" aria-label="Undo last change" disabled>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7 4 12l5 5M4 12h9.5a5.5 5.5 0 0 1 0 11H12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </button>
+                <button class="icon-button" id="redo" type="button" title="Redo (Ctrl+Shift+Z)" aria-label="Redo last change" disabled>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 7 5 5-5 5M20 12h-9.5a5.5 5.5 0 0 0 0 11H12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                </button>
+              </div>
+              <div class="toggle-row">
+                <label class="switch">
+                  <input type="checkbox" id="lock-all" />
+                  <span class="switch__track" aria-hidden="true"><span class="switch__thumb"></span></span>
+                  <span>Lock all swatches</span>
+                </label>
+              </div>
+              <div class="studio__actions studio__actions--split">
+                <button class="button button--subtle" id="save" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h9l3 3v13H6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /><path d="M9 4v5h6M9 20v-5h6v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+                  Save
+                </button>
+                <button class="button button--subtle" id="share" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0-12L8 7m4-4 4 4M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  Share
+                </button>
+              </div>
+              <p class="field-hint" role="status" aria-live="polite" id="generate-hint">Tip: hover a swatch and tap the lock to keep it.</p>
+            </section>
+
+            <section class="panel panel--library">
+              <div class="panel__head">
+                <h3>Your library</h3>
+                <button class="text-button" id="clear-saved" type="button">Clear</button>
+              </div>
+              <ul class="saved-list" id="saved-list" aria-label="Saved palettes"></ul>
+              <p class="empty-state" id="saved-empty">Saved palettes live in this browser only. No account, no tracking.</p>
+            </section>
+          </aside>
+
+          <div class="studio__main">
+            <div class="studio__stage-head reveal">
+              <div>
+                <h3 id="palette-title">Palette — Iris</h3>
+                <p id="palette-subtitle">Auto harmony · 5 swatches · generated locally</p>
+              </div>
+              <div class="view-controls">
+                <button class="text-button" id="copy-all" type="button">Copy hex list</button>
+                <button class="button button--subtle" id="export-open" type="button">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V4m0 0L8 8m4-4 4 4M5 15v4a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                  Export
+                </button>
+              </div>
+            </div>
+
+            <div class="swatch-grid" id="swatch-grid" aria-live="polite" aria-label="Generated palette"></div>
+
+            <div class="swatch-legend">
+              <span><span class="legend-dot legend-dot--lock"></span> Locked</span>
+              <span><span class="legend-dot legend-dot--text"></span> Text rating</span>
+              <span class="swatch-legend__hint">Hover a swatch for actions · drag to reorder</span>
+            </div>
+
+            <!-- Analysis ---------------------------------------------------- -->
+            <div class="analysis panel reveal">
+              <div class="tabs" role="tablist" aria-label="Palette analysis">
+                <button class="tab is-active" id="tab-contrast" role="tab" aria-selected="true" aria-controls="panel-contrast" tabindex="0">Contrast matrix</button>
+                <button class="tab" id="tab-preview" role="tab" aria-selected="false" aria-controls="panel-preview" tabindex="-1">Live preview</button>
+                <button class="tab" id="tab-vision" role="tab" aria-selected="false" aria-controls="panel-vision" tabindex="-1">Colour vision</button>
+                <span class="tabs__slider" aria-hidden="true"></span>
+              </div>
+
+            <div class="tab-panel is-active" id="panel-contrast" role="tabpanel" aria-labelledby="tab-contrast" tabindex="0">
+              <div class="analysis__head">
+                <div>
+                  <h3>WCAG 2.1 contrast — every pair</h3>
+                  <p>Body text needs 4.5:1 (<strong>AA</strong>), 7:1 for <strong>AAA</strong>. Large text only needs 3:1.</p>
+                </div>
+            <label class="switch switch--compact">
+            <input type="checkbox" id="large-text" />
+            <span class="switch__track" aria-hidden="true"><span class="switch__thumb"></span></span>
+            <span>Large text</span>
+            </label>
+            </div>
+            <div class="matrix-wrap">
+              <table class="matrix" id="contrast-matrix">
+                <caption class="visually-hidden">Contrast ratio for every foreground and background pair in the palette</caption>
+              </table>
+            </div>
+            <div class="contrast-summary" id="contrast-summary" aria-live="polite"></div>
+            </div>
+
+            <div class="tab-panel" id="panel-preview" role="tabpanel" aria-labelledby="tab-preview" tabindex="0" hidden>
+              <div class="analysis__head">
+                <div>
+                  <h3>Your palette, in situ</h3>
+                  <p>Lightest swatch is the surface, darkest is ink, the middle step is the action colour.</p>
+                </div>
+            <button class="text-button" id="shuffle-preview" type="button">Shuffle content</button>
+            </div>
+            <div class="preview-grid">
+              <article class="preview-card" id="preview-card">
+                <div class="preview-card__top">
+                  <span class="preview-avatar" id="preview-avatar">HF</span>
+                  <span class="preview-badge" id="preview-badge">NEW</span>
+                </div>
+            <h4 id="preview-heading">Design tokens that ship themselves</h4>
+            <p id="preview-body">
+            One base colour becomes a complete ramp with contrast-safe text,
+            hover states and surface tints — ready for CSS, Tailwind or Figma.
+            </p>
+            <div class="preview-card__actions">
+              <button class="preview-button" id="preview-button" type="button">Get started</button>
+              <button class="preview-button preview-button--ghost" id="preview-button-ghost" type="button">Docs</button>
+            </div>
+            <div class="preview-chips" id="preview-chips">
+              <span>OKLCH</span><span>WCAG AA</span><span>Zero deps</span>
+            </div>
+            </article>
+            <div class="preview-app" id="preview-app">
+              <div class="preview-app__side">
+                <span class="preview-app__logo" id="preview-logo">HF</span>
+                <span class="preview-nav is-active"></span>
+                <span class="preview-nav"></span>
+                <span class="preview-nav"></span>
+                <span class="preview-nav preview-nav--short"></span>
+              </div>
+            <div class="preview-app__main">
+              <div class="preview-app__topbar">
+                <span class="preview-app__title" id="preview-app-title">Overview</span>
+                <span class="preview-app__pill" id="preview-app-pill">Live</span>
+              </div>
+            <div class="preview-stats" id="preview-stats">
+              <div><span>Contrast</span><strong id="preview-stat-1">7.4:1</strong></div>
+              <div><span>Swatches</span><strong id="preview-stat-2">5</strong></div>
+              <div><span>Format</span><strong id="preview-stat-3">OKLCH</strong></div>
+            </div>
+            <div class="preview-chart" id="preview-chart" aria-hidden="true"></div>
+            <div class="preview-table" id="preview-table"></div>
+            </div>
+            </div>
+            </div>
+            <p class="analysis__footnote">Every element above uses only your five swatches — no extra colours, no tint recipes.</p>
+            </div>
+
+            <div class="tab-panel" id="panel-vision" role="tabpanel" aria-labelledby="tab-vision" tabindex="0" hidden>
+              <div class="analysis__head">
+                <div>
+                  <h3>Colour-vision simulation</h3>
+                  <p>About 1 in 12 men and 1 in 200 women see colour differently. Make sure your ramp still reads.</p>
+                </div>
+            <div class="vision-modes" id="vision-modes" role="radiogroup" aria-label="Vision simulation"></div>
+            </div>
+            <div class="vision-grid" id="vision-grid"></div>
+            <p class="analysis__footnote">Simulated with Viénot–Brettel–Mollon matrices in linear light. Use the lightness spread — not hue alone — to carry meaning.</p>
+            </div>
+
+          </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ================================================================ -->
+      <!-- Features                                                         -->
+      <!-- ================================================================ -->
+      <section class="section features" id="features" aria-labelledby="features-title">
+        <header class="section-head">
+          <p class="eyebrow reveal">02 — Why HueForge</p>
+          <h2 id="features-title" class="reveal">Built for the last 10% <span class="text-gradient">nobody automates.</span></h2>
+          <p class="section-head__lede reveal">Most generators stop at pretty swatches. HueForge takes the palette all the way to the pull request.</p>
+        </header>
+
+        <div class="feature-grid">
+          <article class="feature-card feature-card--wide reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h7M4 12h5M4 17h9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /><circle cx="17" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="1.7" /><path d="M14 17h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
+            </div>
+            <h3>Perceptually even ramps</h3>
+            <p>Lightness is sampled in OKLCH, not HSL. The jump between step 300 and 500 looks the same as the one between 700 and 900 — every time, for every hue.</p>
+            <div class="feature-ramp" id="feature-ramp" aria-hidden="true"></div>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 13 4 4L19 7" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </div>
+            <h3>Contrast before aesthetics</h3>
+            <p>A 5×5 matrix grades every pair AA, AAA or fail — with one toggle for large text. Fix accessibility before it becomes a ticket.</p>
+          </article>
+
+          <article class="feature-card feature-card--wide reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13 5l-2 14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </div>
+            <h3>Eight exports, zero copy-paste archaeology</h3>
+            <p>CSS custom properties, Tailwind v4 <code>@theme</code>, SCSS, JSON, W3C design tokens, an SVG poster, Adobe <code>.ase</code> swatches for Photoshop and Illustrator, and a ready-to-post PNG.</p>
+            <div class="format-pills" aria-hidden="true">
+              <span>CSS</span><span>Tailwind</span><span>SCSS</span><span>JSON</span><span>DTCG</span><span>SVG</span><span>ASE</span><span>PNG</span>
+            </div>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.7" /></svg>
+            </div>
+            <h3>Colour-vision simulation</h3>
+            <p>Preview protanopia, deuteranopia, tritanopia and total colour blindness instantly. Spot the pairs that collapse into one before your users do.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="10" width="15" height="10" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.7" /><path d="M8 10V7.8a4 4 0 0 1 8 0V10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /><circle cx="12" cy="15" r="1.2" fill="currentColor" /></svg>
+            </div>
+            <h3>Private by architecture</h3>
+            <p>No accounts, no API keys, no telemetry. Generation, contrast maths and PNG rendering all happen on your device — watch the network tab.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13.5a3.5 3.5 0 0 0 5 0l3-3a3.5 3.5 0 0 0-5-5l-1 1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /><path d="M14 10.5a3.5 3.5 0 0 0-5 0l-3 3a3.5 3.5 0 0 0 5 5l1-1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
+            </div>
+            <h3>Shareable, deterministic</h3>
+            <p>Every palette is encoded in the URL hash. Send the link and the exact same five colours — locks included — rebuild on the other side.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10m0 0 4-4m-4 4-4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /><path d="M4 15a8 8 0 0 0 16 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" /></svg>
+            </div>
+            <h3>Works offline</h3>
+            <p>Three.js and every font are vendored in the repo. Load it once and keep working on a plane — no CDN, no flicker, no surprises.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ================================================================ -->
+      <!-- How it works                                                     -->
+      <!-- ================================================================ -->
+      <section class="section how" id="how-it-works" aria-labelledby="how-title">
+        <header class="section-head">
+          <p class="eyebrow reveal">03 — The workflow</p>
+          <h2 id="how-title" class="reveal">Three steps. <span class="text-gradient">No tabs lost.</span></h2>
+        </header>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__number">01</span>
+            <h3>Set the base</h3>
+            <p>Paste a brand hex, roll a random colour, pick one from the screen with the eyedropper, or drop a logo to extract its dominant hue.</p>
+            <div class="step__visual step__visual--base"><span></span><span></span><span></span></div>
+          </li>
+          <li class="step reveal">
+            <span class="step__number">02</span>
+            <h3>Shape the ramp</h3>
+            <p>Try a harmony, lock the two swatches that work, then keep generating until the rest catches up. Undo is a keystroke away.</p>
+            <div class="step__visual step__visual--harmony">
+              <span class="orb-mini"></span>
+              <span class="orbit orbit--one"></span>
+              <span class="orbit orbit--two"></span>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step__number">03</span>
+            <h3>Verify and ship</h3>
+            <p>Scan the contrast matrix, sanity-check colour vision, then copy CSS or export tokens, an SVG poster and a PNG in one click.</p>
+            <div class="step__visual step__visual--ship">
+              <span class="check">✓</span>
+              <span class="ship-line"></span>
+              <span class="ship-line ship-line--short"></span>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ================================================================ -->
+      <!-- FAQ + CTA                                                        -->
+      <!-- ================================================================ -->
+      <section class="section faq" id="faq" aria-labelledby="faq-title">
+        <header class="section-head section-head--center">
+          <p class="eyebrow reveal">04 — Questions</p>
+          <h2 id="faq-title" class="reveal">Good to know</h2>
+        </header>
+        <div class="faq__list reveal">
+          <details>
+            <summary>Is HueForge really free and private?</summary>
+            <p>Yes. It is MIT-licensed and runs entirely in your browser. There is no analytics, no account and no server — your palettes and saved library live in <code>localStorage</code>. Share links encode the palette in the URL hash, which is never sent to a server.</p>
+          </details>
+          <details>
+            <summary>Why OKLCH instead of HSL?</summary>
+            <p>HSL's "lightness" is not perceptual: <code>hsl(240 100% 50%)</code> is far darker than <code>hsl(60 100% 50%)</code> at the same value. OKLCH is designed so equal numeric changes look equal, which makes ramps predictable. HueForge falls back to gamut-mapped sRGB so the output works everywhere.</p>
+          </details>
+          <details>
+            <summary>How is contrast measured?</summary>
+            <p>With the WCAG 2.1 relative-luminance formula, the same one used by browser audits. You can toggle the 3:1 large-text rule. The matrix grades every foreground/background pair in the palette, including the ones you would never use — so nothing hides.</p>
+          </details>
+          <details>
+            <summary>Can I use the palettes commercially?</summary>
+            <p>Colours themselves are not copyrightable, and anything you generate here is yours to use. The tool's source is MIT-licensed, so you can also fork and self-host it.</p>
+          </details>
+          <details>
+            <summary>Does it work offline?</summary>
+            <p>After the first load, yes — add it to your home screen or open the HTML from disk. The only external asset is Three.js, which is vendored in this repository, so there are no third-party CDN calls at runtime.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="cta reveal" aria-labelledby="cta-title">
+        <div class="cta__glow" aria-hidden="true"></div>
+        <p class="eyebrow">Open source, always</p>
+        <h2 id="cta-title">Steal this workflow.</h2>
+        <p>Fork it, theme it, ship it on your own domain. If HueForge saved you a Figma detour, a star helps someone else find it.</p>
+        <div class="cta__actions">
+          <a class="button button--primary button--lg" href="https://github.com/saturogojo777/whatsapp-ai-bot" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 16 16" aria-hidden="true" width="18" height="18"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" /></svg>
+            Star on GitHub
+          </a>
+          <a class="button button--ghost button--lg" href="#studio">Back to the studio</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="brand" href="#top">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="13" stroke="url(#footerGradient)" stroke-width="1.6" />
+                <circle cx="16" cy="16" r="7.5" stroke="url(#footerGradient)" stroke-width="1.2" opacity="0.7" />
+                <circle cx="16" cy="16" r="2.6" fill="url(#footerGradient)" />
+                <defs>
+                  <linearGradient id="footerGradient" x1="3" y1="3" x2="29" y2="29" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#b9a7ff" /><stop offset="0.55" stop-color="#7c5cff" /><stop offset="1" stop-color="#3dd6c4" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <span class="brand__word">Hue<span>Forge</span></span>
+          </a>
+          <p>Accessible colour ramps for people who ship.</p>
+        </div>
+        <nav class="site-footer__links" aria-label="Footer">
+          <div>
+            <h4>Tool</h4>
+            <a href="#studio">Studio</a>
+            <a href="#features">Features</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div>
+            <h4>Project</h4>
+            <a href="https://github.com/saturogojo777/whatsapp-ai-bot" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://github.com/saturogojo777/whatsapp-ai-bot/releases" target="_blank" rel="noopener noreferrer">Releases</a>
+            <a href="https://github.com/saturogojo777/whatsapp-ai-bot/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT licence</a>
+          </div>
+          <div>
+            <h4>Shortcuts</h4>
+            <span><kbd>Space</kbd> generate</span>
+            <span><kbd>L</kbd> lock all</span>
+            <span><kbd>E</kbd> export</span>
+            <span><kbd>?</kbd> help</span>
+          </div>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© <span id="year">2026</span> HueForge contributors · MIT licence</p>
+        <p class="site-footer__note">
+          Built with vanilla JS and Three.js. No trackers, no cookies, no funny business.
+          <button class="text-button" id="help-open" type="button">Keyboard shortcuts (?)</button>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Export dialog ---------------------------------------------------- -->
+    <dialog class="modal" id="export-dialog" aria-labelledby="export-title">
+      <div class="modal__inner">
+        <header class="modal__head">
+          <div>
+            <p class="eyebrow">Export</p>
+            <h2 id="export-title">Ship your palette</h2>
+          </div>
+          <button class="icon-button" id="export-close" type="button" aria-label="Close export dialog">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+          </button>
+        </header>
+
+        <div class="modal__body">
+          <div class="export-formats" id="export-formats" role="tablist" aria-label="Export format"></div>
+
+          <div class="export-pane">
+            <div class="export-toolbar">
+              <div class="export-toolbar__options">
+                <label class="field-label" for="export-prefix">Token prefix</label>
+                <input id="export-prefix" type="text" value="hue" maxlength="24" spellcheck="false" />
+              </div>
+              <div class="export-toolbar__actions">
+                <button class="button button--subtle" id="export-download" type="button">Download</button>
+                <button class="button button--primary" id="export-copy" type="button">Copy</button>
+              </div>
+            </div>
+            <pre class="export-code" id="export-code" tabindex="0" aria-live="polite"><code></code></pre>
+            <div class="export-image-wrap" id="export-image-wrap" hidden>
+              <img id="export-image" alt="Preview of the exported PNG palette poster" />
+            </div>
+            <p class="export-hint" id="export-hint"></p>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Shortcuts dialog ------------------------------------------------- -->
+    <dialog class="modal modal--small" id="help-dialog" aria-labelledby="help-title">
+      <div class="modal__inner">
+        <header class="modal__head">
+          <div>
+            <p class="eyebrow">Keyboard</p>
+            <h2 id="help-title">Move faster</h2>
+          </div>
+          <button class="icon-button" id="help-close" type="button" aria-label="Close keyboard shortcuts">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+          </button>
+        </header>
+        <div class="shortcut-grid">
+          <div><kbd>Space</kbd><span>Generate new palette</span></div>
+          <div><kbd>R</kbd><span>Random base colour</span></div>
+          <div><kbd>L</kbd><span>Lock / unlock all</span></div>
+          <div><kbd>E</kbd><span>Open export</span></div>
+          <div><kbd>S</kbd><span>Save palette</span></div>
+          <div><kbd>1</kbd>–<kbd>5</kbd><span>Lock that swatch</span></div>
+          <div><kbd>⌘/Ctrl</kbd>+<kbd>Z</kbd><span>Undo</span></div>
+          <div><kbd>T</kbd><span>Toggle theme</span></div>
+          <div><kbd>?</kbd><span>This dialog</span></div>
+          <div><kbd>Esc</kbd><span>Close dialog</span></div>
+        </div>
+        <p class="modal__footnote">Shortcuts are ignored while typing in a field.</p>
+      </div>
+    </dialog>
+
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="false"></div>
+
+    <noscript>
+      <div class="noscript">HueForge needs JavaScript for colour generation and 3D visuals. The source is open — feel free to read it on GitHub.</div>
+    </noscript>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

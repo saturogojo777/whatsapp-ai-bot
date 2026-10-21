@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 — HueForge</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #06070b;
+        --ink: #f1f4fa;
+        --muted: #7f889c;
+        --violet: #8b7cff;
+        --teal: #3dd6c4;
+      }
+      * { box-sizing: border-box; }
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 32px;
+        background:
+          radial-gradient(50vw 50vw at 20% 0%, rgba(124, 92, 255, 0.18), transparent 70%),
+          radial-gradient(40vw 40vw at 90% 10%, rgba(61, 214, 196, 0.1), transparent 70%),
+          var(--bg);
+        color: var(--ink);
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        text-align: center;
+      }
+      main { max-width: 520px; }
+      .code {
+        font-family: ui-monospace, 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      h1 {
+        margin: 18px 0 12px;
+        font-size: clamp(2.4rem, 8vw, 3.6rem);
+        line-height: 1;
+        letter-spacing: -0.04em;
+      }
+      h1 span {
+        background: linear-gradient(100deg, #b9a7ff, #3dd6c4);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      p { color: var(--muted); line-height: 1.7; }
+      a {
+        display: inline-flex;
+        margin-top: 18px;
+        padding: 12px 22px;
+        border-radius: 999px;
+        background: linear-gradient(140deg, #a99cff, #7c5cff);
+        color: #fff;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+        box-shadow: 0 14px 34px -16px rgba(124, 92, 255, 0.9);
+      }
+      .swatches { display: flex; gap: 8px; justify-content: center; margin-top: 34px; }
+      .swatches i {
+        width: 46px; height: 46px; border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="code">Error 404</p>
+      <h1>This hue is <span>out of gamut.</span></h1>
+      <p>The page you asked for does not exist. The palette studio, however, is exactly where you left it.</p>
+      <div class="swatches" aria-hidden="true">
+        <i style="background:#d6e6fc"></i>
+        <i style="background:#a4b3f4"></i>
+        <i style="background:#8963fd"></i>
+        <i style="background:#722da8"></i>
+        <i style="background:#491152"></i>
+      </div>
+      <a href="./">Back to the studio</a>
+    </main>
+  </body>
+</html>
