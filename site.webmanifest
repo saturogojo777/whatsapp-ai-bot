@@ -1,0 +1,17 @@
+{
+  "name": "HueForge — accessible palette generator",
+  "short_name": "HueForge",
+  "description": "Generate five-step OKLCH colour ramps, test WCAG contrast, preview them in real UI and export production-ready tokens.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#06070b",
+  "theme_color": "#06070b",
+  "categories": ["design", "developer tools", "productivity"],
+  "icons": [
+    { "src": "./assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "./assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

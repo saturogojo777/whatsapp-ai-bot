@@ -1,0 +1,63 @@
+name: Bug report
+description: Something is broken, unreadable, or behaving unexpectedly.
+title: 'bug: '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. Screenshots and share links make
+        fixes dramatically faster — a share link reproduces the exact palette.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+      placeholder: I clicked Generate with swatch 3 locked and…
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the studio
+        2. Set base to #7c5cff
+        3. …
+    validations:
+      required: true
+  - type: input
+    id: share-link
+    attributes:
+      label: Share link (optional)
+      description: The URL hash after your last action.
+      placeholder: https://saturogojo777.github.io/whatsapp-ai-bot/#p=…
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Palette generation
+        - Contrast matrix
+        - Colour-vision preview
+        - Export / download
+        - Import / image extraction
+        - 3D hero
+        - Keyboard or screen reader
+        - Playground API
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and OS
+      placeholder: Firefox 141 / Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: console
+    attributes:
+      label: Console errors (optional)
+      render: shell

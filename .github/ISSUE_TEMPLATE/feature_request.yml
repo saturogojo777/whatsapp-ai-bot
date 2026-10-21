@@ -1,0 +1,46 @@
+name: Feature request
+description: Suggest a workflow that would make HueForge more useful.
+title: 'feat: '
+labels: ['enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The most persuasive requests start with the workflow that is currently
+        painful — not with the solution. Both are welcome; the workflow is what
+        helps us judge the trade-offs.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      placeholder: I hand the palette to a design system that needs ten steps, so I…
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      placeholder: A toggle that switches the ramp from five steps to ten…
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      placeholder: Exporting and interpolating by hand, using tool X, …
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - Small (copy, micro-interaction)
+        - Medium (new panel or control)
+        - Large (new export format, new engine feature)
+        - Design / visual polish
+    validations:
+      required: true
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I would like to implement this myself
+        - label: I can help test it

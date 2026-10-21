@@ -1,0 +1,33 @@
+{
+  "name": "hueforge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "HueForge — an accessible OKLCH palette generator with contrast testing, live UI previews and eight export formats.",
+  "keywords": [
+    "color-palette",
+    "oklch",
+    "accessibility",
+    "wcag",
+    "design-tokens",
+    "threejs",
+    "vanilla-javascript",
+    "portfolio-project"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "playground": "node playground/server.mjs",
+    "test": "node --test tests/*.test.js",
+    "assets": "node scripts/generate-assets.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0",
+    "postcss": "^8.5.31",
+    "sharp": "^0.34.4"
+  }
+}

@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180">
+    
+  <defs>
+    <linearGradient id="brand" x1="14.644660940672622%" y1="14.64466094067263%" x2="85.35533905932738%" y2="85.35533905932738%"><stop offset="0" stop-color="#b9a7ff"/><stop offset="0.55" stop-color="#7c5cff"/><stop offset="1" stop-color="#3dd6c4"/></linearGradient>
+    <linearGradient id="headline" x1="1.0926199633097156%" y1="39.60441545911203%" x2="98.90738003669028%" y2="60.39558454088797%"><stop offset="0" stop-color="#b9a7ff"/><stop offset="0.42" stop-color="#e3d9ff"/><stop offset="1" stop-color="#3dd6c4"/></linearGradient>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8b7cff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#8b7cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#3dd6c4" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#3dd6c4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8b7cff" stop-opacity="0.55"/>
+      <stop offset="0.55" stop-color="#6b4cff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#6b4cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbBody" cx="33%" cy="26%" r="78%">
+      <stop offset="0" stop-color="#f1eaff"/>
+      <stop offset="0.28" stop-color="#b7a2ff"/>
+      <stop offset="0.58" stop-color="#7251ee"/>
+      <stop offset="0.85" stop-color="#33207f"/>
+      <stop offset="1" stop-color="#170d3d"/>
+    </radialGradient>
+    <radialGradient id="orbRim" cx="68%" cy="74%" r="60%">
+      <stop offset="0" stop-color="#3dd6c4" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#3dd6c4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ringStroke" x1="32.89899283371656%" y1="3.015368960704585%" x2="67.10100716628344%" y2="96.98463103929541%"><stop offset="0" stop-color="#b9a7ff"/><stop offset="0.5" stop-color="#6b4cff"/><stop offset="1" stop-color="#3dd6c4"/></linearGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="vignette" cx="50%" cy="42%" r="72%">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
+    </radialGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+    
+    <rect x="0" y="0" width="1600" height="1180" rx="0" fill="#06070b" opacity="1"/>
+    <ellipse cx="256" cy="23.6" rx="736" ry="849.6" fill="url(#bgGlow)"/>
+    <ellipse cx="1472" cy="70.8" rx="576" ry="684.4" fill="url(#bgGlow2)" opacity="0.6"/>
+    <rect width="1600" height="1180" fill="url(#grid)" opacity="0.55"/>
+    <rect width="1600" height="1180" fill="url(#vignette)"/>
+    <g transform="translate(80, 48)"><g>
+    <circle cx="18" cy="18" r="18" fill="none" stroke="url(#brand)" stroke-width="1.8"/>
+    <circle cx="18" cy="18" r="10.080000000000002" fill="none" stroke="url(#brand)" stroke-width="1.3679999999999999" opacity="0.72"/>
+    <path d="M18 0V36M0 18H36" stroke="url(#brand)" stroke-width="1.08" opacity="0.38"/>
+    <circle cx="18" cy="18" r="3.6" fill="url(#brand)"/>
+  </g><text x="48" y="28" font-family="Space Grotesk" font-size="21" font-weight="600" fill="#f1f4fa" text-anchor="start" opacity="1" letter-spacing="0">HueForge</text></g>
+    <text x="1520" y="68" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#7f889c" text-anchor="end" opacity="1" letter-spacing="2.2">GENERATED IN THE BROWSER · NO UPLOADS</text>
+    <text x="80" y="158" font-family="Space Grotesk" font-size="54" font-weight="600" fill="#f1f4fa" text-anchor="start" opacity="1" letter-spacing="-2">One base. Infinite ramps.</text>
+    <text x="80" y="196" font-family="Inter" font-size="18" font-weight="400" fill="#b7bfd0" text-anchor="start" opacity="1" letter-spacing="0">Six starting points, each five steps deep — every palette is contrast-checked and export-ready.</text>
+    <g>
+      <rect x="80" y="250" width="453" height="424" rx="22" fill="rgba(255,255,255,0.028)" stroke="rgba(255,255,255,0.09)" stroke-width="1" opacity="1"/>
+      <rect x="98" y="268" width="81.4" height="268" rx="12" fill="#e3e2f7" opacity="1"/>
+            <text x="110" y="512" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">100</text><rect x="181.4" y="268" width="81.4" height="268" rx="2" fill="#acb5dc" opacity="1"/>
+            <text x="193.4" y="512" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">300</text><rect x="264.8" y="268" width="81.4" height="268" rx="2" fill="#8963fd" opacity="1"/>
+            <text x="276.8" y="512" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">500</text><rect x="348.20000000000005" y="268" width="81.4" height="268" rx="2" fill="#6e32a6" opacity="1"/>
+            <text x="360.20000000000005" y="512" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.6" letter-spacing="1">700</text><rect x="431.6" y="268" width="81.4" height="268" rx="2" fill="#2f2458" opacity="1"/>
+            <text x="443.6" y="512" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.6" letter-spacing="1">900</text>
+      <text x="100" y="580" font-family="Space Grotesk" font-size="23" font-weight="600" fill="#f1f4fa" text-anchor="start" opacity="1" letter-spacing="0">Violet study</text>
+      <text x="100" y="606" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#7f889c" text-anchor="start" opacity="1" letter-spacing="1.2">ANALOGOUS · VIOLET</text>
+      <text x="513" y="606" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#7f889c" text-anchor="end" opacity="1" letter-spacing="1.2">SEED 24</text>
+      <text x="100" y="644" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#E3E2F7</text><text x="184" y="644" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#ACB5DC</text><text x="268" y="644" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#8963FD</text><text x="352" y="644" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#6E32A6</text><text x="436" y="644" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#2F2458</text>
+    </g><g>
+      <rect x="573" y="250" width="453" height="424" rx="22" fill="rgba(255,255,255,0.028)" stroke="rgba(255,255,255,0.09)" stroke-width="1" opacity="1"/>
+      <rect x="591" y="268" width="81.4" height="268" rx="12" fill="#f9ebe6" opacity="1"/>
+            <text x="603" y="512" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">100</text><rect x="674.4" y="268" width="81.4" height="268" rx="2" fill="#b2c7b9" opacity="1"/>
+            <text x="686.4" y="512" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">300</text><rect x="757.8" y="268" width="81.4" height="268" rx="2" fill="#d66c4c" opacity="1"/>
+            <text x="769.8" y="512" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">500</text><rect x="841.2" y="268" width="81.4" height="268" rx="2" fill="#51589d" opacity="1"/>
+            <text x="853.2" y="512" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.6" letter-spacing="1">700</text><rect x="924.6" y="268" width="81.4" height="268" rx="2" fill="#4f2c21" opacity="1"/>
+            <text x="936.6" y="512" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.6" letter-spacing="1">900</text>
+      <text x="593" y="580" font-family="Space Grotesk" font-size="23" font-weight="600" fill="#f1f4fa" text-anchor="start" opacity="1" letter-spacing="0">Ember set</text>
+      <text x="593" y="606" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#7f889c" text-anchor="start" opacity="1" letter-spacing="1.2">TRIADIC · LIGHT AMBER</text>
+      <text x="1006" y="606" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#7f889c" text-anchor="end" opacity="1" letter-spacing="1.2">SEED 8</text>
+      <text x="593" y="644" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#F9EBE6</text><text x="677" y="644" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#B2C7B9</text><text x="761" y="644" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#D66C4C</text><text x="845" y="644" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#51589D</text><text x="929" y="644" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#4F2C21</text>
+    </g><g>
+      <rect x="1066" y="250" width="453" height="424" rx="22" fill="rgba(255,255,255,0.028)" stroke="rgba(255,255,255,0.09)" stroke-width="1" opacity="1"/>
+      <rect x="1084" y="268" width="81.4" height="268" rx="12" fill="#e5f3ec" opacity="1"/>
+            <text x="1096" y="512" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">100</text><rect x="1167.4" y="268" width="81.4" height="268" rx="2" fill="#c9bcce" opacity="1"/>
+            <text x="1179.4" y="512" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">300</text><rect x="1250.8" y="268" width="81.4" height="268" rx="2" fill="#00a97c" opacity="1"/>
+            <text x="1262.8" y="512" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">500</text><rect x="1334.2" y="268" width="81.4" height="268" rx="2" fill="#94444c" opacity="1"/>
+            <text x="1346.2" y="512" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.6" letter-spacing="1">700</text><rect x="1417.6" y="268" width="81.4" height="268" rx="2" fill="#164030" opacity="1"/>
+            <text x="1429.6" y="512" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.6" letter-spacing="1">900</text>
+      <text x="1086" y="580" font-family="Space Grotesk" font-size="23" font-weight="600" fill="#f1f4fa" text-anchor="start" opacity="1" letter-spacing="0">Jade system</text>
+      <text x="1086" y="606" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#7f889c" text-anchor="start" opacity="1" letter-spacing="1.2">SPLIT · LIGHT JADE</text>
+      <text x="1499" y="606" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#7f889c" text-anchor="end" opacity="1" letter-spacing="1.2">SEED 41</text>
+      <text x="1086" y="644" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#E5F3EC</text><text x="1170" y="644" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#C9BCCE</text><text x="1254" y="644" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#00A97C</text><text x="1338" y="644" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#94444C</text><text x="1422" y="644" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#164030</text>
+    </g><g>
+      <rect x="80" y="710" width="453" height="424" rx="22" fill="rgba(255,255,255,0.028)" stroke="rgba(255,255,255,0.09)" stroke-width="1" opacity="1"/>
+      <rect x="98" y="728" width="81.4" height="268" rx="12" fill="#f1ebde" opacity="1"/>
+            <text x="110" y="972" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">100</text><rect x="181.4" y="728" width="81.4" height="268" rx="2" fill="#a8c6bc" opacity="1"/>
+            <text x="193.4" y="972" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">300</text><rect x="264.8" y="728" width="81.4" height="268" rx="2" fill="#b38300" opacity="1"/>
+            <text x="276.8" y="972" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">500</text><rect x="348.20000000000005" y="728" width="81.4" height="268" rx="2" fill="#8e3e64" opacity="1"/>
+            <text x="360.20000000000005" y="972" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.6" letter-spacing="1">700</text><rect x="431.6" y="728" width="81.4" height="268" rx="2" fill="#43310a" opacity="1"/>
+            <text x="443.6" y="972" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.6" letter-spacing="1">900</text>
+      <text x="100" y="1040" font-family="Space Grotesk" font-size="23" font-weight="600" fill="#f1f4fa" text-anchor="start" opacity="1" letter-spacing="0">Noon / midnight</text>
+      <text x="100" y="1066" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#7f889c" text-anchor="start" opacity="1" letter-spacing="1.2">TETRADIC · SOFT FERN</text>
+      <text x="513" y="1066" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#7f889c" text-anchor="end" opacity="1" letter-spacing="1.2">SEED 19</text>
+      <text x="100" y="1104" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#F1EBDE</text><text x="184" y="1104" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#A8C6BC</text><text x="268" y="1104" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#B38300</text><text x="352" y="1104" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#8E3E64</text><text x="436" y="1104" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#43310A</text>
+    </g><g>
+      <rect x="573" y="710" width="453" height="424" rx="22" fill="rgba(255,255,255,0.028)" stroke="rgba(255,255,255,0.09)" stroke-width="1" opacity="1"/>
+      <rect x="591" y="728" width="81.4" height="268" rx="12" fill="#ffe7eb" opacity="1"/>
+            <text x="603" y="972" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">100</text><rect x="674.4" y="728" width="81.4" height="268" rx="2" fill="#e6afba" opacity="1"/>
+            <text x="686.4" y="972" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">300</text><rect x="757.8" y="728" width="81.4" height="268" rx="2" fill="#ef427e" opacity="1"/>
+            <text x="769.8" y="972" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">500</text><rect x="841.2" y="728" width="81.4" height="268" rx="2" fill="#006f66" opacity="1"/>
+            <text x="853.2" y="972" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.6" letter-spacing="1">700</text><rect x="924.6" y="728" width="81.4" height="268" rx="2" fill="#582030" opacity="1"/>
+            <text x="936.6" y="972" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.6" letter-spacing="1">900</text>
+      <text x="593" y="1040" font-family="Space Grotesk" font-size="23" font-weight="600" fill="#f1f4fa" text-anchor="start" opacity="1" letter-spacing="0">Rose contrast</text>
+      <text x="593" y="1066" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#7f889c" text-anchor="start" opacity="1" letter-spacing="1.2">COMPLEMENTARY · LIGHT ROSE</text>
+      <text x="1006" y="1066" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#7f889c" text-anchor="end" opacity="1" letter-spacing="1.2">SEED 3</text>
+      <text x="593" y="1104" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#FFE7EB</text><text x="677" y="1104" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#E6AFBA</text><text x="761" y="1104" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#EF427E</text><text x="845" y="1104" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#006F66</text><text x="929" y="1104" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#582030</text>
+    </g><g>
+      <rect x="1066" y="710" width="453" height="424" rx="22" fill="rgba(255,255,255,0.028)" stroke="rgba(255,255,255,0.09)" stroke-width="1" opacity="1"/>
+      <rect x="1084" y="728" width="81.4" height="268" rx="12" fill="#dbe7f1" opacity="1"/>
+            <text x="1096" y="972" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">100</text><rect x="1167.4" y="728" width="81.4" height="268" rx="2" fill="#99bdda" opacity="1"/>
+            <text x="1179.4" y="972" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">300</text><rect x="1250.8" y="728" width="81.4" height="268" rx="2" fill="#138ed7" opacity="1"/>
+            <text x="1262.8" y="972" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#0b0d12" text-anchor="start" opacity="0.6" letter-spacing="1">500</text><rect x="1334.2" y="728" width="81.4" height="268" rx="2" fill="#005d92" opacity="1"/>
+            <text x="1346.2" y="972" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.6" letter-spacing="1">700</text><rect x="1417.6" y="728" width="81.4" height="268" rx="2" fill="#0b324d" opacity="1"/>
+            <text x="1429.6" y="972" font-family="JetBrains Mono" font-size="10" font-weight="400" fill="#ffffff" text-anchor="start" opacity="0.6" letter-spacing="1">900</text>
+      <text x="1086" y="1040" font-family="Space Grotesk" font-size="23" font-weight="600" fill="#f1f4fa" text-anchor="start" opacity="1" letter-spacing="0">Azure mono</text>
+      <text x="1086" y="1066" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#7f889c" text-anchor="start" opacity="1" letter-spacing="1.2">MONOCHROME · LIGHT INDIGO</text>
+      <text x="1499" y="1066" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#7f889c" text-anchor="end" opacity="1" letter-spacing="1.2">SEED 77</text>
+      <text x="1086" y="1104" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#DBE7F1</text><text x="1170" y="1104" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#99BDDA</text><text x="1254" y="1104" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#138ED7</text><text x="1338" y="1104" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#005D92</text><text x="1422" y="1104" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#8d95a8" text-anchor="start" opacity="1" letter-spacing="0.4">#0B324D</text>
+    </g>
+    <text x="80" y="1162" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#5c6478" text-anchor="start" opacity="1" letter-spacing="1.8">HUEFORGE · hueforge.app</text>
+  </svg>

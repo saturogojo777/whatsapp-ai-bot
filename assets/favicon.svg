@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <defs>
+      <linearGradient id="iconGradient" x1="14.644660940672622%" y1="14.64466094067263%" x2="85.35533905932738%" y2="85.35533905932738%"><stop offset="0" stop-color="#c3b3ff"/><stop offset="0.5" stop-color="#7c5cff"/><stop offset="1" stop-color="#3dd6c4"/></linearGradient>
+      <radialGradient id="iconBg" cx="50%" cy="30%" r="80%">
+        <stop offset="0" stop-color="#151827"/>
+        <stop offset="1" stop-color="#06070b"/>
+      </radialGradient>
+    </defs>
+    <rect width="64" height="64" rx="14.08" fill="url(#iconBg)"/>
+    <rect x="1" y="1" width="62" height="62" rx="14.08" fill="none" stroke="rgba(255,255,255,0.12)"/>
+    <g transform="translate(0, 0)">
+      <g>
+    <circle cx="32" cy="32" r="23.04" fill="none" stroke="url(#iconGradient)" stroke-width="2.304"/>
+    <circle cx="32" cy="32" r="12.9024" fill="none" stroke="url(#iconGradient)" stroke-width="1.75104" opacity="0.72"/>
+    <path d="M32 8.96V55.04M8.96 32H55.04" stroke="url(#iconGradient)" stroke-width="1.3823999999999999" opacity="0.38"/>
+    <circle cx="32" cy="32" r="4.608" fill="url(#iconGradient)"/>
+  </g>
+    </g>
+  </svg>

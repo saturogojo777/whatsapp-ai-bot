@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+    
+  <defs>
+    <linearGradient id="brand" x1="14.644660940672622%" y1="14.64466094067263%" x2="85.35533905932738%" y2="85.35533905932738%"><stop offset="0" stop-color="#b9a7ff"/><stop offset="0.55" stop-color="#7c5cff"/><stop offset="1" stop-color="#3dd6c4"/></linearGradient>
+    <linearGradient id="headline" x1="1.0926199633097156%" y1="39.60441545911203%" x2="98.90738003669028%" y2="60.39558454088797%"><stop offset="0" stop-color="#b9a7ff"/><stop offset="0.42" stop-color="#e3d9ff"/><stop offset="1" stop-color="#3dd6c4"/></linearGradient>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8b7cff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#8b7cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#3dd6c4" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#3dd6c4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8b7cff" stop-opacity="0.55"/>
+      <stop offset="0.55" stop-color="#6b4cff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#6b4cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbBody" cx="33%" cy="26%" r="78%">
+      <stop offset="0" stop-color="#f1eaff"/>
+      <stop offset="0.28" stop-color="#b7a2ff"/>
+      <stop offset="0.58" stop-color="#7251ee"/>
+      <stop offset="0.85" stop-color="#33207f"/>
+      <stop offset="1" stop-color="#170d3d"/>
+    </radialGradient>
+    <radialGradient id="orbRim" cx="68%" cy="74%" r="60%">
+      <stop offset="0" stop-color="#3dd6c4" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#3dd6c4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ringStroke" x1="32.89899283371656%" y1="3.015368960704585%" x2="67.10100716628344%" y2="96.98463103929541%"><stop offset="0" stop-color="#b9a7ff"/><stop offset="0.5" stop-color="#6b4cff"/><stop offset="1" stop-color="#3dd6c4"/></linearGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="vignette" cx="50%" cy="42%" r="72%">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
+    </radialGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+    
+    <rect x="0" y="0" width="1200" height="630" rx="0" fill="#06070b" opacity="1"/>
+    <ellipse cx="192" cy="12.6" rx="552" ry="453.59999999999997" fill="url(#bgGlow)"/>
+    <ellipse cx="1104" cy="37.8" rx="432" ry="365.4" fill="url(#bgGlow2)" opacity="0.6"/>
+    <rect width="1200" height="630" fill="url(#grid)" opacity="0.55"/>
+    <rect width="1200" height="630" fill="url(#vignette)"/>
+    <g transform="translate(64, 48)"><g>
+    <circle cx="20" cy="20" r="20" fill="none" stroke="url(#brand)" stroke-width="2"/>
+    <circle cx="20" cy="20" r="11.200000000000001" fill="none" stroke="url(#brand)" stroke-width="1.52" opacity="0.72"/>
+    <path d="M20 0V40M0 20H40" stroke="url(#brand)" stroke-width="1.2" opacity="0.38"/>
+    <circle cx="20" cy="20" r="4" fill="url(#brand)"/>
+  </g><text x="52" y="31" font-family="Space Grotesk" font-size="23" font-weight="600" fill="#f1f4fa" text-anchor="start" opacity="1" letter-spacing="0">HueForge</text></g>
+    <text x="1136" y="72" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#7f889c" text-anchor="end" opacity="1" letter-spacing="2.4">OPEN SOURCE</text>
+    <text x="64" y="214" font-family="Space Grotesk" font-size="58" font-weight="600" fill="#f1f4fa" text-anchor="start" opacity="1" letter-spacing="-2">Palettes that survive</text>
+    <text x="64" y="278" font-family="Space Grotesk" font-size="58" font-weight="600" fill="url(#headline)" text-anchor="start" opacity="1" letter-spacing="-2">real interfaces.</text>
+    <text x="64" y="336" font-family="Inter" font-size="19" font-weight="400" fill="#b7bfd0" text-anchor="start" opacity="1" letter-spacing="0">OKLCH ramps · WCAG contrast · live previews</text>
+    <text x="64" y="364" font-family="Inter" font-size="19" font-weight="400" fill="#b7bfd0" text-anchor="start" opacity="1" letter-spacing="0">Eight exports. Zero uploads.</text>
+    <g>
+    <rect x="64" y="398" width="127.92" height="34" rx="17" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)" stroke-width="1" opacity="1"/>
+    <text x="79" y="421" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#cdc3ff" text-anchor="start" opacity="1" letter-spacing="1.2">MIT LICENSED</text>
+  </g>
+    <g>
+    <rect x="218" y="398" width="87.12" height="34" rx="17" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)" stroke-width="1" opacity="1"/>
+    <text x="233" y="421" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#9de9dd" text-anchor="start" opacity="1" letter-spacing="1.2">WCAG AA</text>
+  </g>
+    <g>
+    <circle cx="965" cy="260" r="227.7" fill="url(#orbGlow)" filter="url(#blur)"/>
+    <circle cx="965" cy="260" r="138" fill="url(#orbBody)"/>
+    <circle cx="965" cy="260" r="138" fill="url(#orbRim)"/>
+    <ellipse cx="934.64" cy="213.07999999999998" rx="69" ry="46.92" fill="url(#sheen)" opacity="0.7"/>
+    <ellipse cx="965" cy="260" rx="207" ry="57.96" fill="none" stroke="url(#ringStroke)" stroke-width="1.4" opacity="0.55" transform="rotate(-18 965 260)"/>
+    <ellipse cx="965" cy="260" rx="245.64000000000001" ry="75.9" fill="none" stroke="url(#ringStroke)" stroke-width="1.1" opacity="0.35" transform="rotate(26 965 260)"/>
+    <ellipse cx="965" cy="260" rx="282.9" ry="93.84" fill="none" stroke="url(#ringStroke)" stroke-width="0.9" opacity="0.18" transform="rotate(-46 965 260)"/>
+    <circle cx="1166.48" cy="211.7" r="5" fill="#3dd6c4" opacity="1"/>
+    <circle cx="727.64" cy="298.64" r="3.4" fill="#d9ccff" opacity="0.85"/>
+    <circle cx="1040.9" cy="101.30000000000001" r="2.8" fill="#ffffff" opacity="0.7"/>
+  </g>
+    <rect x="64" y="486" width="210.4" height="82" rx="12" fill="#e3e2f7" opacity="1"/><rect x="278.4" y="486" width="210.4" height="82" rx="0" fill="#acb5dc" opacity="1"/><rect x="492.8" y="486" width="210.4" height="82" rx="0" fill="#8963fd" opacity="1"/><rect x="707.2" y="486" width="210.4" height="82" rx="0" fill="#6e32a6" opacity="1"/><rect x="921.6" y="486" width="210.4" height="82" rx="0" fill="#2f2458" opacity="1"/>
+    <text x="64" y="604" font-family="JetBrains Mono" font-size="11" font-weight="400" fill="#5c6478" text-anchor="start" opacity="1" letter-spacing="1.2">hueforge.app — accessible colour, without the guesswork</text>
+  </svg>

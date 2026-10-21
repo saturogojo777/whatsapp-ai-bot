@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+    
+  <defs>
+    <linearGradient id="brand" x1="14.644660940672622%" y1="14.64466094067263%" x2="85.35533905932738%" y2="85.35533905932738%"><stop offset="0" stop-color="#b9a7ff"/><stop offset="0.55" stop-color="#7c5cff"/><stop offset="1" stop-color="#3dd6c4"/></linearGradient>
+    <linearGradient id="headline" x1="1.0926199633097156%" y1="39.60441545911203%" x2="98.90738003669028%" y2="60.39558454088797%"><stop offset="0" stop-color="#b9a7ff"/><stop offset="0.42" stop-color="#e3d9ff"/><stop offset="1" stop-color="#3dd6c4"/></linearGradient>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8b7cff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#8b7cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgGlow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#3dd6c4" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#3dd6c4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8b7cff" stop-opacity="0.55"/>
+      <stop offset="0.55" stop-color="#6b4cff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#6b4cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbBody" cx="33%" cy="26%" r="78%">
+      <stop offset="0" stop-color="#f1eaff"/>
+      <stop offset="0.28" stop-color="#b7a2ff"/>
+      <stop offset="0.58" stop-color="#7251ee"/>
+      <stop offset="0.85" stop-color="#33207f"/>
+      <stop offset="1" stop-color="#170d3d"/>
+    </radialGradient>
+    <radialGradient id="orbRim" cx="68%" cy="74%" r="60%">
+      <stop offset="0" stop-color="#3dd6c4" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#3dd6c4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ringStroke" x1="32.89899283371656%" y1="3.015368960704585%" x2="67.10100716628344%" y2="96.98463103929541%"><stop offset="0" stop-color="#b9a7ff"/><stop offset="0.5" stop-color="#6b4cff"/><stop offset="1" stop-color="#3dd6c4"/></linearGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="vignette" cx="50%" cy="42%" r="72%">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
+    </radialGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+    
+    <rect x="0" y="0" width="1600" height="900" rx="0" fill="#06070b" opacity="1"/>
+    <ellipse cx="256" cy="18" rx="736" ry="648" fill="url(#bgGlow)"/>
+    <ellipse cx="1472" cy="54" rx="576" ry="522" fill="url(#bgGlow2)" opacity="0.6"/>
+    <rect width="1600" height="900" fill="url(#grid)" opacity="0.55"/>
+    <rect width="1600" height="900" fill="url(#vignette)"/>
+    <g transform="translate(80, 56)">
+      <g>
+    <circle cx="22" cy="22" r="22" fill="none" stroke="url(#brand)" stroke-width="2.2"/>
+    <circle cx="22" cy="22" r="12.32" fill="none" stroke="url(#brand)" stroke-width="1.672" opacity="0.72"/>
+    <path d="M22 0V44M0 22H44" stroke="url(#brand)" stroke-width="1.3199999999999998" opacity="0.38"/>
+    <circle cx="22" cy="22" r="4.4" fill="url(#brand)"/>
+  </g>
+      <text x="58" y="34" font-family="Space Grotesk" font-size="26" font-weight="600" fill="#f1f4fa" text-anchor="start" opacity="1" letter-spacing="0">HueForge</text>
+    </g>
+    <text x="1520" y="78" font-family="JetBrains Mono" font-size="13" font-weight="400" fill="#7f889c" text-anchor="end" opacity="1" letter-spacing="2.4">OPEN SOURCE · MIT · NO SIGN-UP</text>
+
+    <text x="80" y="238" font-family="Space Grotesk" font-size="82" font-weight="600" fill="#f1f4fa" text-anchor="start" opacity="1" letter-spacing="-3">Palettes that</text>
+    <text x="80" y="330" font-family="Space Grotesk" font-size="82" font-weight="600" fill="url(#headline)" text-anchor="start" opacity="1" letter-spacing="-3">survive real interfaces.</text>
+    <text x="80" y="396" font-family="Inter" font-size="22" font-weight="400" fill="#b7bfd0" text-anchor="start" opacity="1" letter-spacing="0">Five-step OKLCH ramps, WCAG-checked contrast and live UI previews —</text>
+    <text x="80" y="428" font-family="Inter" font-size="22" font-weight="400" fill="#b7bfd0" text-anchor="start" opacity="1" letter-spacing="0">so your palette works before it ships.</text>
+
+    <g>
+    <rect x="80" y="474" width="127.24000000000001" height="34" rx="17" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)" stroke-width="1" opacity="1"/>
+    <text x="95" y="497" font-family="JetBrains Mono" font-size="13" font-weight="400" fill="#cdc3ff" text-anchor="start" opacity="1" letter-spacing="1.2">OKLCH RAMPS</text>
+  </g>
+    <g>
+    <rect x="258" y="474" width="100.72" height="34" rx="17" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)" stroke-width="1" opacity="1"/>
+    <text x="273" y="497" font-family="JetBrains Mono" font-size="13" font-weight="400" fill="#9de9dd" text-anchor="start" opacity="1" letter-spacing="1.2">WCAG 2.1</text>
+  </g>
+    <g>
+    <rect x="386" y="474" width="144.92000000000002" height="34" rx="17" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)" stroke-width="1" opacity="1"/>
+    <text x="401" y="497" font-family="JetBrains Mono" font-size="13" font-weight="400" fill="#b7bfd0" text-anchor="start" opacity="1" letter-spacing="1.2">COLOUR VISION</text>
+  </g>
+    <g>
+    <rect x="560" y="474" width="109.56" height="34" rx="17" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)" stroke-width="1" opacity="1"/>
+    <text x="575" y="497" font-family="JetBrains Mono" font-size="13" font-weight="400" fill="#b7bfd0" text-anchor="start" opacity="1" letter-spacing="1.2">8 EXPORTS</text>
+  </g>
+
+    <g>
+    <circle cx="1245" cy="296" r="300.3" fill="url(#orbGlow)" filter="url(#blur)"/>
+    <circle cx="1245" cy="296" r="182" fill="url(#orbBody)"/>
+    <circle cx="1245" cy="296" r="182" fill="url(#orbRim)"/>
+    <ellipse cx="1204.96" cy="234.12" rx="91" ry="61.88" fill="url(#sheen)" opacity="0.7"/>
+    <ellipse cx="1245" cy="296" rx="273" ry="76.44" fill="none" stroke="url(#ringStroke)" stroke-width="1.4" opacity="0.55" transform="rotate(-18 1245 296)"/>
+    <ellipse cx="1245" cy="296" rx="323.96" ry="100.10000000000001" fill="none" stroke="url(#ringStroke)" stroke-width="1.1" opacity="0.35" transform="rotate(26 1245 296)"/>
+    <ellipse cx="1245" cy="296" rx="373.09999999999997" ry="123.76" fill="none" stroke="url(#ringStroke)" stroke-width="0.9" opacity="0.18" transform="rotate(-46 1245 296)"/>
+    <circle cx="1510.72" cy="232.3" r="5" fill="#3dd6c4" opacity="1"/>
+    <circle cx="931.96" cy="346.96000000000004" r="3.4" fill="#d9ccff" opacity="0.85"/>
+    <circle cx="1345.1" cy="86.70000000000002" r="2.8" fill="#ffffff" opacity="0.7"/>
+  </g>
+
+    <rect x="1029" y="88" width="126" height="38" rx="19" fill="rgba(10,12,20,0.6)" stroke="rgba(255,255,255,0.16)" stroke-width="1" opacity="1"/>
+    <text x="1092" y="113" font-family="JetBrains Mono" font-size="14" font-weight="400" fill="#f1f4fa" text-anchor="middle" opacity="1" letter-spacing="0">#7C5CFF</text>
+    <rect x="1332" y="456" width="78" height="36" rx="18" fill="#3dd6c4" opacity="1"/>
+    <text x="1371" y="480" font-family="JetBrains Mono" font-size="15" font-weight="600" fill="#07130f" text-anchor="middle" opacity="1" letter-spacing="0">AAA</text>
+
+    <text x="80" y="560" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#7f889c" text-anchor="start" opacity="1" letter-spacing="3">THE OUTPUT</text>
+    <text x="1520" y="560" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#7f889c" text-anchor="end" opacity="1" letter-spacing="1.6">SEED 24 · ANALOGOUS · VIOLET</text>
+    <rect x="80" y="586" width="276.8" height="216" rx="18" fill="#e3e2f7" stroke="rgba(255,255,255,0.10)" stroke-width="1" opacity="1"/>
+        <text x="100" y="616" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="rgba(11,13,18,0.62)" text-anchor="start" opacity="1" letter-spacing="1.4">100</text>
+        <text x="98" y="710" font-family="Space Grotesk" font-size="46" font-weight="500" fill="#0b0d12" text-anchor="start" opacity="0.94" letter-spacing="0">Aa</text>
+        <text x="100" y="758" font-family="JetBrains Mono" font-size="18" font-weight="600" fill="#0b0d12" text-anchor="start" opacity="1" letter-spacing="0">#E3E2F7</text>
+        <text x="100" y="782" font-family="Inter" font-size="12" font-weight="400" fill="rgba(11,13,18,0.42)" text-anchor="start" opacity="1" letter-spacing="0">Veil · Lavender</text><rect x="370.8" y="586" width="276.8" height="216" rx="18" fill="#acb5dc" stroke="rgba(255,255,255,0.10)" stroke-width="1" opacity="1"/>
+        <text x="390.8" y="616" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="rgba(11,13,18,0.62)" text-anchor="start" opacity="1" letter-spacing="1.4">300</text>
+        <text x="388.8" y="710" font-family="Space Grotesk" font-size="46" font-weight="500" fill="#0b0d12" text-anchor="start" opacity="0.94" letter-spacing="0">Aa</text>
+        <text x="390.8" y="758" font-family="JetBrains Mono" font-size="18" font-weight="600" fill="#0b0d12" text-anchor="start" opacity="1" letter-spacing="0">#ACB5DC</text>
+        <text x="390.8" y="782" font-family="Inter" font-size="12" font-weight="400" fill="rgba(11,13,18,0.42)" text-anchor="start" opacity="1" letter-spacing="0">Surface · Light Violet</text><rect x="661.6" y="586" width="276.8" height="216" rx="18" fill="#8963fd" stroke="rgba(255,255,255,0.10)" stroke-width="1" opacity="1"/>
+        <text x="681.6" y="616" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="rgba(11,13,18,0.62)" text-anchor="start" opacity="1" letter-spacing="1.4">500</text>
+        <text x="679.6" y="710" font-family="Space Grotesk" font-size="46" font-weight="500" fill="#0b0d12" text-anchor="start" opacity="0.94" letter-spacing="0">Aa</text>
+        <text x="681.6" y="758" font-family="JetBrains Mono" font-size="18" font-weight="600" fill="#0b0d12" text-anchor="start" opacity="1" letter-spacing="0">#8963FD</text>
+        <text x="681.6" y="782" font-family="Inter" font-size="12" font-weight="400" fill="rgba(11,13,18,0.42)" text-anchor="start" opacity="1" letter-spacing="0">Tint · Violet</text><rect x="952.4000000000001" y="586" width="276.8" height="216" rx="18" fill="#6e32a6" stroke="rgba(255,255,255,0.10)" stroke-width="1" opacity="1"/>
+        <text x="972.4000000000001" y="616" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="rgba(255,255,255,0.68)" text-anchor="start" opacity="1" letter-spacing="1.4">700</text>
+        <text x="970.4000000000001" y="710" font-family="Space Grotesk" font-size="46" font-weight="500" fill="#ffffff" text-anchor="start" opacity="0.94" letter-spacing="0">Aa</text>
+        <text x="972.4000000000001" y="758" font-family="JetBrains Mono" font-size="18" font-weight="600" fill="#ffffff" text-anchor="start" opacity="1" letter-spacing="0">#6E32A6</text>
+        <text x="972.4000000000001" y="782" font-family="Inter" font-size="12" font-weight="400" fill="rgba(255,255,255,0.45)" text-anchor="start" opacity="1" letter-spacing="0">Core · Deep Orchid</text><rect x="1243.2" y="586" width="276.8" height="216" rx="18" fill="#2f2458" stroke="rgba(255,255,255,0.10)" stroke-width="1" opacity="1"/>
+        <text x="1263.2" y="616" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="rgba(255,255,255,0.68)" text-anchor="start" opacity="1" letter-spacing="1.4">900</text>
+        <text x="1261.2" y="710" font-family="Space Grotesk" font-size="46" font-weight="500" fill="#ffffff" text-anchor="start" opacity="0.94" letter-spacing="0">Aa</text>
+        <text x="1263.2" y="758" font-family="JetBrains Mono" font-size="18" font-weight="600" fill="#ffffff" text-anchor="start" opacity="1" letter-spacing="0">#2F2458</text>
+        <text x="1263.2" y="782" font-family="Inter" font-size="12" font-weight="400" fill="rgba(255,255,255,0.45)" text-anchor="start" opacity="1" letter-spacing="0">Ink · Dark Violet</text>
+
+    <text x="80" y="858" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#5c6478" text-anchor="start" opacity="1" letter-spacing="1.8">HUEFORGE · hueforge.app</text>
+    <text x="1520" y="858" font-family="JetBrains Mono" font-size="12" font-weight="400" fill="#5c6478" text-anchor="end" opacity="1" letter-spacing="1.8">OKLCH · WCAG 2.1 · BUILT WITH THREE.JS</text>
+  </svg>
